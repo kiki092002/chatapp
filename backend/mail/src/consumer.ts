@@ -15,7 +15,7 @@ export const startSendOTPConsumer = async () => {
     });
     const channel = await connect.createChannel();
 
-    const queueName = "send-opt";
+    const queueName = "send-otp";
 
     await channel.assertQueue(queueName, { durable: true });
 
