@@ -6,9 +6,11 @@ This project was built both as a scalable, production-ready **real-time chat app
 1.User Service
 - Handles user registration, login, and JWT-based authentication.
 - Manages OTP generation and validation.
+
 2.Chat Service
 - Manages conversations and message storage.
 - Handles WebSocket-based real-time communication.
+
 3.Mail Service
-- Sends OTP via Gmail API and securely stores it in in-memory storage Redis.
+- Sends OTP via Gmail API and securely stores it in in-memory storage Redis with TTL support ( OTP code expried in 5 mins).
 - Listens to message queue from RabbitMQ for decoupled communication.
